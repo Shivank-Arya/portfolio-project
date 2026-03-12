@@ -5,77 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Shivank Arya</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="#home">
+    <header
+        class="flex items-center justify-between py-4 px-[5%] bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+
+        <div class="flex-shrink-0">
+            <a href="#home" class="block">
                 <img src="./logo/Shivank-Arya-Logo.png" alt="Shivank Arya MERN stack web developer Logo"
-                    class="logo-img">
+                    class="h-10 w-auto object-contain">
             </a>
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+        <!-- <nav class="hidden md:block">
+            <ul class="flex items-center gap-8 text-sm font-medium text-gray-600 ">
+                <li><a href="#home" class="hover:text-black transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-black transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-black transition-colors">Skills</a></li>
+                <li><a href="#certifications" class="hover:text-black transition-colors">Certifications</a></li>
+                <li><a href="#portfolio" class="hover:text-black transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-black transition-colors">Contact</a></li>
+            </ul>
+        </nav> -->
+
+        <nav class="relative flex items-center justify-between p-4 bg-white">
+
+            <div class="flex flex-col gap-1 cursor-pointer md:hidden z-50" id="hamburger">
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+            </div>
+
+            <ul id="nav-links" class="
+    hidden 
+    flex-col absolute top-full right-0 w-48 bg-white shadow-lg rounded-lg p-4 mt-2 border border-gray-100
+    md:static md:flex md:flex-row md:gap-8 md:w-auto md:shadow-none md:p-0 md:mt-0 md:border-none
+    text-sm font-medium text-gray-600 z-40">
+                <li><a href="#home" class="block py-2 hover:text-black transition-colors">Home</a></li>
+                <li><a href="#about" class="block py-2 hover:text-black transition-colors">About</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-black transition-colors">Skills</a></li>
+                <li><a href="#certifications" class="block py-2 hover:text-black transition-colors">Certifications</a>
+                </li>
+                <li><a href="#portfolio" class="block py-2 hover:text-black transition-colors">Projects</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-black transition-colors">Contact</a></li>
             </ul>
         </nav>
 
-        <div class="theme-toggle">
-            <button type="button" id="mode-toggle" aria-label="Toggle theme">
-                <span id="sun-icon" style="display: none;">☀️</span>
-                <span id="moon-icon">🌙</span>
+        <div class="flex items-center gap-4">
+            <button type="button" id="mode-toggle"
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-600 hover:bg-gray-100 transition-all border border-gray-200 shadow-sm">
+                <span id="sun-icon" class="hidden text-lg">☀️</span>
+                <span id="moon-icon" class="text-lg">🌙</span>
             </button>
         </div>
-        </div>
+
     </header>
 
-    <section id="home" class="home-section">
-        <div class="hero-content">
-            <h1>Designer, FullStack Developer & Mentor</h1>
-            <p class="subtitle">I design and code beautifully simple things, and I love what I do.</p>
+    <section id="home" class="min-h-[90vh] flex items-center justify-center bg-white px-[5%] py-20">
+        <div class="max-w-3xl w-full text-center flex flex-col items-center">
 
-            <div class="profile-container">
-                <img src="./images/shivank profile pic.jpg" alt="Shivank Arya" class="profile-img">
+            <div class="space-y-4 mb-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
+                    Designer, Full-Stack Developer & Mentor
+                </h1>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">
+                    I design and code beautifully simple things, and I love what I do.
+                </p>
             </div>
 
-            <div class="social-links">
-                <a href="#" aria-label="LinkedIn" class="LinkedIn">
-                    <svg>
-                        <use style="fill: rgb(0, 110, 255);" href="./icons/square-linkedin-brands-solid-full.svg"></use>
-                    </svg>
+            <div class="relative mb-10">
+                <div class="w-70 h-70 rounded-full border-[6px] border-gray-50 shadow-2xl overflow-hidden bg-gray-100">
+                    <img src="./images/shivank profile pic.jpg" alt="Shivank Arya"
+                        class="w-full h-full object-cover object-[center_8%] scale-110">
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="https://www.linkedin.com/in/shivank-arya" target="_blank"
+                    class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-linkedin-brands-solid-full.svg" alt="LinkedIn"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
-                <a href="#" aria-label="GitHub" class="GitHub">
-                    <svg>
-                        <use style="fill: rgb(0, 0, 0);" href="./icons/square-github-brands-solid-full.svg"></use>
-                    </svg>
+
+                <a href="https://github.com/Shivank-Arya" target="_blank" class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-github-brands-solid-full.svg" alt="GitHub"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
-                <a href="#" aria-label="Twitter" class="Twitter">
-                    <svg>
-                        <use style="fill: rgb(0, 153, 255);" href="./icons/square-x-twitter-brands-solid-full.svg"></use>
-                    </svg>
+
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-x-twitter-brands-solid-full.svg" alt="X"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
-                <a href="#" aria-label="Instagram" class="Instagram">
-                    <svg>
-                        <use style="fill: rgb(255, 80, 80);" href="./icons/square-instagram-brands-solid-full.svg"></use>
-                    </svg>
+
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-instagram-brands-solid-full.svg" alt="Instagram"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
             </div>
 
-            <div class="cta-container">
-                <a href=".//shivank-resume/SHIVANK ARYA.pdf" download class="resume-btn">Download Resume</a>
+            <div>
+                <a href="./shivank-resume/SHIVANK ARYA.pdf" download
+                    class="inline-block px-12 py-5 bg-black text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl active:scale-95">
+                    Download Resume
+                </a>
             </div>
+
         </div>
     </section>
 
-    <section id="about" class="about-section">
+
+    <!-- <section id="about" class="about-section">
         <div class="container about-flex">
 
             <div class="about-image">
@@ -100,9 +142,58 @@
             </div>
 
         </div>
+    </section> -->
+
+    <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="absolute -top-4 -left-4 w-full h-full border-2 border-black rounded-2xl hidden md:block">
+                        </div>
+
+                        <img src="about-profile.png" alt="Shivank Arya"
+                            class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 relative inline-block">
+                        About Me
+                        <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-black md:w-full"></span>
+                    </h2>
+
+                    <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
+                        <p>
+                            I am a <span class="text-black font-semibold">Computer Science Engineer</span> with a
+                            passion for building scalable web applications
+                            and mentoring the next generation of tech talent. With a background in educational
+                            leadership and a deep focus on the <span class="text-black font-semibold">MERN stack</span>,
+                            I bridge the gap between complex
+                            technical logic and user-centric design.
+                        </p>
+                        <p>
+                            My journey involves everything from optimizing SEO for legal platforms to
+                            architecting full-stack solutions. I thrive on solving intricate problems
+                            and turning creative ideas into functional reality.
+                        </p>
+                    </div>
+
+                    <div class="mt-10">
+                        <a href="#"
+                            class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl active:scale-95">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <section id="skills" class="skills-section">
+    <!-- <section id="skills" class="skills-section">
         <div class="container">
             <h2 class="section-heading">Technical Proficiency</h2>
 
@@ -148,9 +239,74 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section id="skills" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Proficiency</h2>
+                <div class="w-20 h-1.5 bg-black"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">MERN Stack</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">90%</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">MongoDB, Express, React, Node.js</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">Python & Logic</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">85%</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">Algorithm Design & Backend Scripting</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">SEO & Marketing</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">80%</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">Digital Branding & SEO Optimization</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">UI/UX & Frontend</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">75%</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">Responsive Design & Tailwind CSS</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 75%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <section id="certifications" class="certifications-section">
+    <!-- <section id="certifications" class="certifications-section">
         <div class="container">
             <h2 class="section-heading">Relevant Certifications</h2>
 
@@ -176,6 +332,68 @@
                     <p>Advanced certification focusing on backend logic, data structures, and automation scripts.</p>
                     <a href="./path/to/python-cert.pdf" target="_blank" class="cert-btn">View Certificate</a>
                 </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="certifications" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="mb-12 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Relevant Certifications</h2>
+                <div class="w-20 h-1.5 bg-black mx-auto md:mx-0"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-4xl mb-6">📜</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Full Stack Web Development</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Comprehensive 6-month certification covering MongoDB, Express, React, and Node.js.
+                        </p>
+                    </div>
+                    <a href="./certifications/Full Stack Web Development certificate - shivank sample for project.pdf"
+                        target="_blank"
+                        class="inline-block text-center border-2 border-black text-black font-semibold py-2 px-4 rounded-lg hover:bg-black hover:text-white transition-colors">
+                        View Certificate
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-4xl mb-6">🔍</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">SEO Optimization Professional</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Specialized training in search engine optimization, keywords, and digital marketing
+                            strategies.
+                        </p>
+                    </div>
+                    <a href="./certifications/SEO Optimization Professional certificate - shivank sample for project.pdf"
+                        target="_blank"
+                        class="inline-block text-center border-2 border-black text-black font-semibold py-2 px-4 rounded-lg hover:bg-black hover:text-white transition-colors">
+                        View Certificate
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-4xl mb-6">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Python Programming</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Advanced certification focusing on backend logic, data structures, and automation scripts.
+                        </p>
+                    </div>
+                    <a href="./certifications/Python Programming certificate - shivank sample for project.pdf"
+                        target="_blank"
+                        class="inline-block text-center border-2 border-black text-black font-semibold py-2 px-4 rounded-lg hover:bg-black hover:text-white transition-colors">
+                        View Certificate
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -290,4 +508,5 @@
     </footer>
 
 </body>
+
 </html>
