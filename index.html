@@ -5,289 +5,478 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Shivank Arya</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="#home">
-                <img src="./logo/Shivank-Arya-Logo.png" alt="Shivank Arya MERN stack web developer Logo"
-                    class="logo-img">
+    <header
+        class="flex items-center justify-between py-4 px-[5%] bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+
+        <div class="shrink-0">
+            <a href="#home" class="block">
+                <img src="./logo/Shivank-Arya-Logo.png" alt="Shivank Arya Logo" class="h-10 w-auto object-contain">
             </a>
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+        <nav class="relative flex items-center">
+
+            <div class="flex flex-col gap-1 cursor-pointer md:hidden z-50" id="hamburger">
+                <span class="w-6 h-0.5 bg-gray-600"></span>
+                <span class="w-6 h-0.5 bg-gray-600"></span>
+                <span class="w-6 h-0.5 bg-gray-600"></span>
+            </div>
+
+            <ul id="nav-links" class="
+            hidden 
+            flex-col absolute top-full right-0 w-48 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-4 mt-2 border border-gray-100
+            md:static md:flex md:flex-row md:gap-8 md:w-auto md:shadow-none md:p-0 md:mt-0 md:border-none md:bg-transparent
+            text-sm font-medium text-gray-600 z-40">
+                <li><a href="#home" class="block py-2 hover:text-black transition-colors">Home</a></li>
+                <li><a href="#about" class="block py-2 hover:text-black transition-colors">About</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-black transition-colors">Skills</a></li>
+                <li><a href="#certifications" class="block py-2 hover:text-black transition-colors">Certifications</a>
+                </li>
+                <li><a href="#portfolio" class="block py-2 hover:text-black transition-colors">Projects</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-black transition-colors">Contact</a></li>
             </ul>
         </nav>
 
-        <div class="theme-toggle">
-            <button type="button" id="mode-toggle" aria-label="Toggle theme">
-                <span id="sun-icon" style="display: none;">☀️</span>
-                <span id="moon-icon">🌙</span>
+        <div class="flex items-center gap-4">
+            <button type="button" id="mode-toggle"
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-50/50 text-gray-600 hover:bg-gray-100 transition-all border border-gray-200">
+                <span id="moon-icon" class="text-lg">🌙</span>
             </button>
         </div>
-        </div>
+
     </header>
 
-    <section id="home" class="home-section">
-        <div class="hero-content">
-            <h1>Designer, FullStack Developer & Mentor</h1>
-            <p class="subtitle">I design and code beautifully simple things, and I love what I do.</p>
+    <section id="home" class="min-h-[90vh] flex items-center justify-center bg-white px-[5%] py-20">
+        <div class="max-w-3xl w-full text-center flex flex-col items-center">
 
-            <div class="profile-container">
-                <img src="./images/shivank profile pic.jpg" alt="Shivank Arya" class="profile-img">
-            </div>
-
-            <div class="social-links">
-                <a href="#" aria-label="LinkedIn" class="LinkedIn">
-                    <svg>
-                        <use style="fill: rgb(0, 110, 255);" href="./icons/square-linkedin-brands-solid-full.svg"></use>
-                    </svg>
-                </a>
-                <a href="#" aria-label="GitHub" class="GitHub">
-                    <svg>
-                        <use style="fill: rgb(0, 0, 0);" href="./icons/square-github-brands-solid-full.svg"></use>
-                    </svg>
-                </a>
-                <a href="#" aria-label="Twitter" class="Twitter">
-                    <svg>
-                        <use style="fill: rgb(0, 153, 255);" href="./icons/square-x-twitter-brands-solid-full.svg"></use>
-                    </svg>
-                </a>
-                <a href="#" aria-label="Instagram" class="Instagram">
-                    <svg>
-                        <use style="fill: rgb(255, 80, 80);" href="./icons/square-instagram-brands-solid-full.svg"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="cta-container">
-                <a href=".//shivank-resume/SHIVANK ARYA.pdf" download class="resume-btn">Download Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container about-flex">
-
-            <div class="about-image">
-                <img src=".about-profile.png" alt="Shivank Arya" class="img-fluid">
-            </div>
-
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I am a Computer Science Engineer with a passion for building scalable web applications
-                    and mentoring the next generation of tech talent. With a background in educational
-                    leadership and a deep focus on the MERN stack, I bridge the gap between complex
-                    technical logic and user-centric design.
+            <div class="space-y-4 mb-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
+                    Designer, Full-Stack Developer & Mentor
+                </h1>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">
+                    I design and code beautifully simple things, and I love what I do.
                 </p>
-                <p>
-                    My journey involves everything from optimizing SEO for legal platforms to
-                    architecting full-stack solutions. I thrive on solving intricate problems
-                    and turning creative ideas into functional reality.
-                </p>
+            </div>
 
-                <a href="#" class="read-more-btn">Read More</a>
+            <div class="relative mb-10">
+                <div class="w-70 h-70 rounded-full border-[6px] border-gray-50 shadow-2xl overflow-hidden bg-gray-100">
+                    <img src="./images/shivank profile pic.jpg" alt="Shivank Arya"
+                        class="w-full h-full object-cover object-[center_8%] scale-110">
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="https://www.linkedin.com/in/shivank-arya" target="_blank"
+                    class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-linkedin-brands-solid-full.svg" alt="LinkedIn"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
+                </a>
+
+                <a href="https://github.com/Shivank-Arya" target="_blank" class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-github-brands-solid-full.svg" alt="GitHub"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
+                </a>
+
+                <a href="https://x.com/Shivank1232025" class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-x-twitter-brands-solid-full.svg" alt="X"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
+                </a>
+
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="./icons/square-instagram-brands-solid-full.svg" alt="Instagram"
+                        class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
+                </a>
+            </div>
+
+            <div>
+                <a href="./shivank-resume/SHIVANK ARYA.pdf" download
+                    class="inline-block px-12 py-5 bg-black text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl active:scale-95">
+                    Download Resume
+                </a>
             </div>
 
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-heading">Technical Proficiency</h2>
+    <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
 
-            <div class="skills-container">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>MERN Stack (MongoDB, Express, React, Node)</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-line" data-percent="90%">
-                        <span style="width: 90%;"></span>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="absolute -top-4 -left-4 w-full h-full border-2 border-black rounded-2xl hidden md:block">
+                        </div>
+
+                        <img src="./images/shivank-about-pic.jpg" alt="Shivank Arya"
+                            class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-500">
                     </div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Python & Programming Logic</span>
-                        <span>85%</span>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 relative inline-block">
+                        About Me
+                        <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-black md:w-full"></span>
+                    </h2>
+
+                    <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
+                        <p>
+                            I am a <span class="text-black font-semibold">Computer Science Engineer</span> with a
+                            passion for building scalable web applications
+                            and mentoring the next generation of tech talent. With a background in educational
+                            leadership and a deep focus on the <span class="text-black font-semibold">MERN stack</span>,
+                            I bridge the gap between complex
+                            technical logic and user-centric design.
+                        </p>
+                        <p>
+                            My journey involves everything from optimizing SEO for legal platforms to
+                            architecting full-stack solutions. I thrive on solving intricate problems
+                            and turning creative ideas into functional reality.
+                        </p>
                     </div>
-                    <div class="progress-line" data-percent="85%">
-                        <span style="width: 85%;"></span>
+
+                    <div class="mt-10">
+                        <a href="#"
+                            class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl active:scale-95">
+                            Read More
+                        </a>
                     </div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>SEO & Digital Marketing</span>
-                        <span>80%</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Proficiency</h2>
+                <div class="w-20 h-1.5 bg-black"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">MERN Stack</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">90%</span>
                     </div>
-                    <div class="progress-line" data-percent="80%">
-                        <span style="width: 80%;"></span>
+                    <p class="text-sm text-gray-600 mb-6">MongoDB, Express, React, Node.js</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 90%;"></div>
                     </div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>UI/UX Design & Frontend Layouts</span>
-                        <span>75%</span>
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">Python & Logic</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">85%</span>
                     </div>
-                    <div class="progress-line" data-percent="75%">
-                        <span style="width: 75%;"></span>
+                    <p class="text-sm text-gray-600 mb-6">Algorithm Design & Backend Scripting</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 85%;"></div>
                     </div>
+                </div>
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">SEO & Marketing</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">80%</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">Digital Branding & SEO Optimization</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div
+                    class="group p-6 bg-gray-50 rounded-xl border border-transparent hover:border-black transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">UI/UX & Frontend</h3>
+                        <span class="text-sm font-semibold bg-black text-white px-2 py-1 rounded">75%</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6">Responsive Design & Tailwind CSS</p>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-black h-full transition-all duration-1000 group-hover:bg-indigo-600"
+                            style="width: 75%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="mb-12 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Relevant Certifications</h2>
+                <div class="w-20 h-1.5 bg-black mx-auto md:mx-0"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-4xl mb-6">📜</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Full Stack Web Development</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Comprehensive 6-month certification covering MongoDB, Express, React, and Node.js.
+                        </p>
+                    </div>
+                    <a href="./certifications/Full Stack Web Development certificate - shivank sample for project.pdf"
+                        target="_blank"
+                        class="inline-block text-center border-2 border-black text-black font-semibold py-2 px-4 rounded-lg hover:bg-black hover:text-white transition-colors">
+                        View Certificate
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-4xl mb-6">🔍</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">SEO Optimization Professional</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Specialized training in search engine optimization, keywords, and digital marketing
+                            strategies.
+                        </p>
+                    </div>
+                    <a href="./certifications/SEO Optimization Professional certificate - shivank sample for project.pdf"
+                        target="_blank"
+                        class="inline-block text-center border-2 border-black text-black font-semibold py-2 px-4 rounded-lg hover:bg-black hover:text-white transition-colors">
+                        View Certificate
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="text-4xl mb-6">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Python Programming</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Advanced certification focusing on backend logic, data structures, and automation scripts.
+                        </p>
+                    </div>
+                    <a href="./certifications/Python Programming certificate - shivank sample for project.pdf"
+                        target="_blank"
+                        class="inline-block text-center border-2 border-black text-black font-semibold py-2 px-4 rounded-lg hover:bg-black hover:text-white transition-colors">
+                        View Certificate
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Featured Projects</h2>
+                <div class="w-20 h-1.5 bg-black"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div tabindex="0"
+                    class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
+
+                    <img src="./images/legal-platform seo.png" alt="Legal Platform SEO"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-focus:scale-110">
+
+                    <div
+                        class="absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 text-center">
+                        <h3 class="text-white text-xl font-bold mb-2">Legal Platform SEO</h3>
+                        <p class="text-gray-300 text-sm mb-6">6-month optimization for bestadvocatebhopalindia.com.</p>
+
+                        <a href="#"
+                            class="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+                <div tabindex="0"
+                    class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
+                    <img src="./images/mern-e-store.jpg" alt="MERN E-Store"
+                        class="w-full h-full object-cover group-hover:scale-110 group-focus:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 text-center">
+                        <h3 class="text-white text-xl font-bold mb-2">MERN E-Store</h3>
+                        <p class="text-gray-300 text-sm mb-6">A full-stack e-commerce solution with payment integration.
+                        </p>
+                        <a href="#"
+                            class="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div tabindex="0"
+                    class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
+                    <img src="./images/vision-academy-classes.png" alt="Vision Academy"
+                        class="w-full h-full object-cover group-hover:scale-110 group-focus:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 text-center">
+                        <h3 class="text-white text-xl font-bold mb-2">Vision Academy Identity</h3>
+                        <p class="text-gray-300 text-sm mb-6">Complete branding and digital presence for a coaching
+                            institute.</p>
+                        <a href="#"
+                            class="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div tabindex="0"
+                    class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
+                    <img src="./images/automation-scripts.png" alt="Automation"
+                        class="w-full h-full object-cover group-hover:scale-110 group-focus:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 text-center">
+                        <h3 class="text-white text-xl font-bold mb-2">Automation Scripts</h3>
+                        <p class="text-gray-300 text-sm mb-6">Python-based data scraping and automation tools.</p>
+                        <a href="#"
+                            class="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div tabindex="0"
+                    class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
+                    <img src="./images/modern-portfolio-ui.png" alt="Portfolio UI"
+                        class="w-full h-full object-cover group-hover:scale-110 group-focus:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 text-center">
+                        <h3 class="text-white text-xl font-bold mb-2">Modern Portfolio UI</h3>
+                        <p class="text-gray-300 text-sm mb-6">Clean, minimal UI/UX design for professional services.</p>
+                        <a href="#"
+                            class="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div tabindex="0"
+                    class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
+                    <img src="./images/lms-dashboard.png" alt="LMS"
+                        class="w-full h-full object-cover group-hover:scale-110 group-focus:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 text-center">
+                        <h3 class="text-white text-xl font-bold mb-2">LMS Dashboard</h3>
+                        <p class="text-gray-300 text-sm mb-6">A learning management system for student progress
+                            tracking.</p>
+                        <a href="#"
+                            class="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">View
+                            Project</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <div class="w-20 h-1.5 bg-black"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+
+                    <div class="bg-black p-8 md:p-12 text-white md:w-1/3 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Contact Info</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                                Have a project in mind? Looking to collaborate? Feel free to reach out!
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-sm">📍 Bhopal, MP, India</p>
+                            <p class="text-sm">✉️ 499aryashivank@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <form action="#" method="POST" class="p-8 md:p-12 md:w-2/3 space-y-6">
+
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="flex flex-col">
+                                <label for="name" class="text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required
+                                    class="w-full px-4 py-3 bg-gray-100 border-transparent border-2 rounded-lg focus:bg-white focus:border-black focus:ring-0 transition-all duration-300 outline-none">
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="email" class="text-sm font-semibold text-gray-700 mb-2">Email
+                                    Address</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required
+                                    class="w-full px-4 py-3 bg-gray-100 border-transparent border-2 rounded-lg focus:bg-white focus:border-black focus:ring-0 transition-all duration-300 outline-none">
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label for="message" class="text-sm font-semibold text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="How can I help you?"
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-100 border-transparent border-2 rounded-lg focus:bg-white focus:border-black focus:ring-0 transition-all duration-300 outline-none resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="w-full md:w-auto px-10 py-4 bg-black text-white font-bold rounded-lg hover:bg-gray-800 active:scale-95 transition-all duration-300 shadow-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="certifications" class="certifications-section">
-        <div class="container">
-            <h2 class="section-heading">Relevant Certifications</h2>
+    <footer class="bg-white border-t border-gray-100 py-10">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
 
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">📜</div>
-                    <h3>Full Stack Web Development</h3>
-                    <p>Comprehensive 6-month certification covering MongoDB, Express, React, and Node.js.</p>
-                    <a href="./path/to/mern-cert.pdf" target="_blank" class="cert-btn">View Certificate</a>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">🔍</div>
-                    <h3>SEO Optimization Professional</h3>
-                    <p>Specialized training in search engine optimization, keywords, and digital marketing strategies.
+                <div class="order-2 md:order-1">
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        &copy; 2026 <span class="text-black font-semibold">Shivank Arya</span>. All rights reserved.
                     </p>
-                    <a href="./path/to/seo-cert.pdf" target="_blank" class="cert-btn">View Certificate</a>
                 </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">⚙️</div>
-                    <h3>Python Programming</h3>
-                    <p>Advanced certification focusing on backend logic, data structures, and automation scripts.</p>
-                    <a href="./path/to/python-cert.pdf" target="_blank" class="cert-btn">View Certificate</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="project-section">
-        <div class="container">
-            <h2 class="section-heading">My Featured Projects</h2>
-
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="./images/legal-platform seo.png" alt="SEO Project" class="project-img">
-                    <div class="project-overlay">
-                        <h3>Legal Platform SEO</h3>
-                        <p>6-month optimization for bestadvocatebhopalindia.com.</p>
-                        <a href="#" class="view-link">View Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/mern-e-store.jpg" alt="E-commerce App" class="project-img">
-                    <div class="project-overlay">
-                        <h3>MERN E-Store</h3>
-                        <p>A full-stack e-commerce solution with payment integration.</p>
-                        <a href="#" class="view-link">View Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/vision-academy-classes.png" alt="Branding Project" class="project-img">
-                    <div class="project-overlay">
-                        <h3>Vision Academy Identity</h3>
-                        <p>Complete branding and digital presence for a coaching institute.</p>
-                        <a href="#" class="view-link">View Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/automation-scripts.png" alt="Automation Tool" class="project-img">
-                    <div class="project-overlay">
-                        <h3>Automation Scripts</h3>
-                        <p>Python-based data scraping and automation tools.</p>
-                        <a href="#" class="view-link">View Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/modern-portfolio-ui.png" alt="Portfolio Design" class="project-img">
-                    <div class="project-overlay">
-                        <h3>Modern Portfolio UI</h3>
-                        <p>Clean, minimal UI/UX design for professional services.</p>
-                        <a href="#" class="view-link">View Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="./images/lms-dashboard.png" alt="EdTech App" class="project-img">
-                    <div class="project-overlay">
-                        <h3>LMS Dashboard</h3>
-                        <p>A learning management system for student progress tracking.</p>
-                        <a href="#" class="view-link">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-heading">Get In Touch</h2>
-
-            <div class="contact-container">
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="How can I help you?"
-                            required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Shivank Arya. All rights reserved.</p>
-
-                <div class="contact-actions">
-                    <a href="tel:+919399782151" class="footer-btn call-btn">
-                        <span>📞</span> Call Now
+                <div class="flex flex-col sm:flex-row items-center gap-4 order-1 md:order-2 w-full sm:w-auto">
+                    <a href="tel:+919399782151"
+                        class="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-gray-100 text-gray-900 font-medium rounded-full hover:bg-black hover:text-white transition-all duration-300 active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        Call Now
                     </a>
-                    <a href="mailto:499aryashivank@gmail.com" class="footer-btn email-btn">
-                        <span>✉️</span> Send Email
+
+                    <a href="mailto:499aryashivank@gmail.com"
+                        class="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300 shadow-md active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Send Email
                     </a>
                 </div>
+
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>
