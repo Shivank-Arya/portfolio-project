@@ -7,25 +7,30 @@
     <title>Portfolio | Shivank Arya</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-
+<!-- still have to work on night functionality of the page, will do that after making the page more responsive and complete using js -->
+ <!-- make sure to go through the comments once before making changes -->
+<!-- have added to the githun page, portfolio-project main and home branch -->
+ <!-- used css using tailwind cli functionality -->
 <body>
+    <!-- Header acts as the container for your entire navigation bar. -->
     <header
         class="flex items-center justify-between py-4 px-[5%] bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
-
+        <!-- logo section -->
         <div class="shrink-0">
             <a href="#home" class="block">
                 <img src="./logo/Shivank-Arya-Logo.png" alt="Shivank Arya Logo" class="h-10 w-auto object-contain">
             </a>
         </div>
-
+        <!-- nav provides navigation links for better UX -->
         <nav class="relative flex items-center">
 
+            <!-- hamburger icon for responsive UI (mobile only)-->
             <div class="flex flex-col gap-1 cursor-pointer md:hidden z-50" id="hamburger">
                 <span class="w-6 h-0.5 bg-gray-600"></span>
                 <span class="w-6 h-0.5 bg-gray-600"></span>
                 <span class="w-6 h-0.5 bg-gray-600"></span>
             </div>
-
+            <!-- navigation links -->
             <ul id="nav-links" class="
             hidden 
             flex-col absolute top-full right-0 w-48 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-4 mt-2 border border-gray-100
@@ -41,15 +46,16 @@
             </ul>
         </nav>
 
+        <!-- day/night button -->
         <div class="flex items-center gap-4">
             <button type="button" id="mode-toggle"
                 class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-50/50 text-gray-600 hover:bg-gray-100 transition-all border border-gray-200">
                 <span id="moon-icon" class="text-lg">🌙</span>
             </button>
         </div>
-
     </header>
 
+    <!-- hero section -->
     <section id="home" class="min-h-[90vh] flex items-center justify-center bg-white px-[5%] py-20">
         <div class="max-w-3xl w-full text-center flex flex-col items-center">
 
@@ -61,37 +67,38 @@
                     I design and code beautifully simple things, and I love what I do.
                 </p>
             </div>
-
+            <!-- profile image -->
             <div class="relative mb-10">
                 <div class="w-70 h-70 rounded-full border-[6px] border-gray-50 shadow-2xl overflow-hidden bg-gray-100">
                     <img src="./images/shivank profile pic.jpg" alt="Shivank Arya"
                         class="w-full h-full object-cover object-[center_8%] scale-110">
                 </div>
             </div>
-
+            <!-- links to my social media platforms -->
             <div class="flex justify-center gap-8 mb-12">
+                <!-- LinkedIN -->
                 <a href="https://www.linkedin.com/in/shivank-arya" target="_blank"
                     class="hover:scale-110 transition-transform">
                     <img src="./icons/square-linkedin-brands-solid-full.svg" alt="LinkedIn"
                         class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
-
+                <!-- GitHub -->
                 <a href="https://github.com/Shivank-Arya" target="_blank" class="hover:scale-110 transition-transform">
                     <img src="./icons/square-github-brands-solid-full.svg" alt="GitHub"
                         class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
-
+                <!-- Twitter or X -->
                 <a href="https://x.com/Shivank1232025" class="hover:scale-110 transition-transform">
                     <img src="./icons/square-x-twitter-brands-solid-full.svg" alt="X"
                         class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
-
+                <!-- Instagram does not have a link yet -->
                 <a href="#" class="hover:scale-110 transition-transform">
                     <img src="./icons/square-instagram-brands-solid-full.svg" alt="Instagram"
                         class="w-12 h-12 drop-shadow-sm filter grayscale hover:grayscale-0 transition-all duration-300">
                 </a>
             </div>
-
+            <!-- my resume provider button -->
             <div>
                 <a href="./shivank-resume/SHIVANK ARYA.pdf" download
                     class="inline-block px-12 py-5 bg-black text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl active:scale-95">
@@ -102,6 +109,7 @@
         </div>
     </section>
 
+    <!-- about section -->
     <section id="about" class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
@@ -138,7 +146,7 @@
                             and turning creative ideas into functional reality.
                         </p>
                     </div>
-
+                    <!-- read more button that can be useful in future to direct user to about me page if and when added -->
                     <div class="mt-10">
                         <a href="#"
                             class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl active:scale-95">
@@ -151,13 +159,14 @@
         </div>
     </section>
 
+    <!-- skills section with progress bar showing current level of skills (mernstack, python&logic, seo&marketing, UI/UX&frontend) -->
     <section id="skills" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Proficiency</h2>
                 <div class="w-20 h-1.5 bg-black"></div>
             </div>
-
+            <!-- using grid layout for better UX -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <div
@@ -216,6 +225,7 @@
         </div>
     </section>
 
+    <!-- certification section (3 certificates, files linked to relevent buttons available as pdf in code folder) -->
     <section id="certifications" class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="mb-12 text-center md:text-left">
@@ -278,13 +288,14 @@
         </div>
     </section>
 
+    <!-- projects section (6 sample projects, not functional yet but as we complete more projects they can be placed here) -->
     <section id="portfolio" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Featured Projects</h2>
                 <div class="w-20 h-1.5 bg-black"></div>
             </div>
-
+            <!-- using grid again, 2rows 3cols each allow for 6 projects space, have added hover effects, images made using ai -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div tabindex="0"
                     class="group relative overflow-hidden rounded-2xl bg-gray-200 aspect-video shadow-md hover:shadow-2xl focus:shadow-2xl transition-all duration-500 outline-none">
@@ -380,6 +391,7 @@
         </div>
     </section>
 
+    <!-- contact form section, added email, location and added relevent sections for user input and made the submit button (send message) so user can contact me via email, just action part of the form is not done, so have to work on that later on -->
     <section id="contact" class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="mb-12">
@@ -440,6 +452,7 @@
         </div>
     </section>
 
+    <!-- footer section of the page, working buttons attached, user can contact me on phone or through email -->
     <footer class="bg-white border-t border-gray-100 py-10">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
