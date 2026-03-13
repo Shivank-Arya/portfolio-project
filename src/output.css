@@ -421,6 +421,9 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
